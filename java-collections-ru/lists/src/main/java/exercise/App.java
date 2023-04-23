@@ -11,8 +11,8 @@ class App {
         String[] wordSymbol = word.split("");
         String[] symbols = symbol.split("");
 
-        ArrayList <String> listWordSymbol = new ArrayList<>(Arrays.asList(wordSymbol));
-        ArrayList <String> listSymbol = new ArrayList<>(Arras.asList(symbols));
+        ArrayList<String> listWordSymbol = new ArrayList<>(Arrays.asList(wordSymbol));
+        ArrayList<String> listSymbol = new ArrayList<>(Arrays.asList(symbols));
 
         for (String s : listSymbol) {
             if (listWordSymbol.contains(s)) {

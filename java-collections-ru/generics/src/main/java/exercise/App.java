@@ -16,9 +16,9 @@ class App {
                 String key = entry.getKey();
                 String value = entry.getValue();
                 if (!book.containsKey(key) || !book.get(key).equals(value)) {
-                        match = true;
-                    }
+                    match = true;
                 }
+            }
             if (match) {
                 resultList.add(book);
             }

@@ -12,7 +12,7 @@ class App {
 
         for (Map<String, String> book : books) {
             boolean match = true;
-            for (Map.Entry<String, String> serchBooks : criteria.entrySet()) {
+            for (Map.Entry<String, String> entry : criteria.entrySet()) {
                 String key = entry.getKey();
                 String value = entry.getValue();
                 if (!book.containsKey(key) || !book.get(key).equals(value)) {

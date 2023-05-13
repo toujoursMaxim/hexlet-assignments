@@ -8,26 +8,23 @@ import java.util.Map.Entry;
 // BEGIN
 class App {
     public static List<Map<String, String>> findWhere(List<Map<String, String>> books, Map<String, String> serchBooks) {
-        List<Map<String, String>> result = new ArrayList<>();
+        List<Map<String, String>> resultList = new ArrayList<>();
 
         for (Map<String, String> book : books) {
-            boolean test = false;
+            boolean match = false;
             for (Map.Entry<String, String> serchBooks : serchBooks.entrySet()) {
-                if (book.containsKey(serchBooks.getKey())) {
-                    if (book.containsValue(serchBooks.getValue())) {
-                        test = true;
-                    } else {
-                        test = false;
-                        break;
+                String key = entry.getKey();
+                String value = entry.getValue();
+                if (!book.containsKey(key) || !book.get(key).equals(value)) {
+                        match = true;
                     }
                 }
-            }
-            if (test) {
-                result.add(book);
+            if (match) {
+                resultList.add(book);
             }
         }
 
-        return result;
+        return resultList;
     }
 }
 //END

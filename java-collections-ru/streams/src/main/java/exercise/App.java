@@ -10,7 +10,7 @@ class App {
         long freeDomainsNumber = emailsList.stream()
                 .filter(str -> str.contains("@gmail.com") || str.contains("@yandex.ru") || str.contains("hotmail.com"))
                     .count();
-            return freeDomainsNumber;
-        }
+        return freeDomainsNumber;
     }
+}
 // END

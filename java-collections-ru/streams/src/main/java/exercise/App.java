@@ -7,13 +7,9 @@ import java.util.Arrays;
 class App {
 
     public static Integer getCountOfFreeMails(List<String> emailsList) {
-            Integer freeDomainsNumber = emailsList.stream()
-                    .filter(str -> str.contains("@gmail.com") ||
-                            str.contains("@yandex.ru") ||
-                            str.contains("hotmail.com"))
+        Integer freeDomainsNumber = emailsList.stream()
+                .filter(str -> str.contains("@gmail.com") || str.contains("@yandex.ru") || str.contains("hotmail.com"))
                     .count()
-                    .orElse(0);
-
             return freeDomainsNumber;
         }
     }

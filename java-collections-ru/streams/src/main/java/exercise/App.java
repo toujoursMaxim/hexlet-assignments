@@ -1,16 +1,15 @@
 package exercise;
 
 import java.util.List;
-import java.util.Arrays;
-
 // BEGIN
 class App {
 
     public static long getCountOfFreeMails(List<String> emailsList) {
-        long freeDomainsNumber = emailsList.stream()
-                .filter(str -> str.contains("@gmail.com") || str.contains("@yandex.ru") || str.contains("hotmail.com"))
-                    .count();
-        return freeDomainsNumber;
+        List<String> freeDomainsNumber = List.of("@gmail.com", "@yandex.ru", "hotmail.com");
+        return emailsList.stream()
+                .map(emails -> emails.slpit("@")[1])
+                .filter(emails -> emailsList.contains(emails))
+                .count();
     }
 }
 // END

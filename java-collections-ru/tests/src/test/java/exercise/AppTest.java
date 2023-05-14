@@ -11,7 +11,7 @@ class AppTest {
     @Test
     void testTake() {
         // BEGIN
-        Lis<Integer> numbers1 = new ArrayList<>();
+        List<Integer> numbers1 = new ArrayList<>();
         numbers1.add(1);
         numbers1.add(2);
         numbers1.add(3);

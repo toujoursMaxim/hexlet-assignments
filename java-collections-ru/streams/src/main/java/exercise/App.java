@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 // BEGIN
 class App {
-private static final List<String> FREE_DOMAINS = Arrays.asList(
+    private static final List<String> FREE_DOMAINS = Arrays.asList(
         "gmail.com", "yandex.ru", "hotmail.com"
 );
     public static long getCountOfFreeEmails(List<String> emailsList) {

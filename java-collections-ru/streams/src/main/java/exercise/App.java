@@ -6,7 +6,7 @@ import java.util.Arrays;
 // BEGIN
 class App {
 
-    public static long getCountOfFreeMails(List<String> emailsList) {
+    public static long getCountOfFreeEmails(List<String> emailsList) {
         long freeDomains = emailsList.stream()
                 .filter(str -> str.contains("@yandex.ru") || str.contains("@gmail.com") || str.contains("hotmail.com"))
                 .count();

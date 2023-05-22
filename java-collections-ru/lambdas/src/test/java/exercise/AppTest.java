@@ -27,7 +27,7 @@ class AppTest {
     };
 
     @Test
-    void test enlargeArrayImage1() {
+    void testEnlargeArrayImage1() {
         String[][] actual = App.enlargeArrayImage(image1);
         String[][] expected = {
                 {"*", "*", "*", "*", "*", "*", "*", "*"},
@@ -45,7 +45,7 @@ class AppTest {
     @Test
     void testEnlargeArrayImage2() {
         String[][] actual2 = App.enlargeArrayImage(image2);
-        String[][] expected = {
+        String[][] expected2 = {
                 {"", "", "", "", "", "", "", ""},
                 {"", "", "", "", "", "", "", ""},
                 {"", "", "", "", "", "", "", ""},
@@ -56,12 +56,12 @@ class AppTest {
                 {"", "", "", "", "", "", "", ""},
         };
         Assertions.assertThat(actual2)
-                .isEqualTo(actual2);
+                .isEqualTo(expected2);
     }
     @Test
     void testEnlargeArrayImage3() {
         String[][] actual3 = App.enlargeArrayImage(image3);
-        String[][] expected = {
+        String[][] expected3 = {
                 {"*", "*", "/", "/", ".", ".", ",", ","},
                 {"*", "*", "/", "/", ".", ".", ",", ","},
                 {"/", "/", "*", "*", ",", ",", ".", "."},
@@ -71,7 +71,7 @@ class AppTest {
                 {".", ".", ",", ",", "/", "/", "*", "*"},
                 {".", ".", ",", ",", "/", "/", "*", "*"},
         };
-        Asserctions.assertThat(actual3)
+        Assertions.assertThat(actual3)
                 .isEqualTo(expected3);
     }
 }

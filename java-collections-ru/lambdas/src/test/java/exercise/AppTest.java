@@ -1,7 +1,7 @@
 package exercise;
 
-import org.junit.jupiter.api.Test;
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 // BEGIN
 class AppTest {
@@ -42,6 +42,7 @@ class AppTest {
         Assertions.assertThat(actual)
                 .isEqualTo(expected);
     }
+
     @Test
     void testEnlargeArrayImage2() {
         String[][] actual2 = App.enlargeArrayImage(emptyImage);
@@ -58,6 +59,7 @@ class AppTest {
         Assertions.assertThat(actual2)
                 .isEqualTo(expected2);
     }
+
     @Test
     void testEnlargeArrayImage3() {
         String[][] actual3 = App.enlargeArrayImage(differentSymbols);

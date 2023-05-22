@@ -4,9 +4,9 @@ import java.util.Arrays;
 import java.utils.stream.Stream;
 
 // BEGIN
-class App {
+public class App {
 
-    public static String[][] enlargeArrayImage(String[][] str) {
+    public static String[][] enlargeArrayImage(String[][] image) {
         String[][] result = Arrays.stream(image)
                 .map(row -> Arrays.stream(row))
                 .flatMap(symbol -> Stream.of(symbol, symbol))

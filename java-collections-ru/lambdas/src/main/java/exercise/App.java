@@ -1,6 +1,7 @@
 package exercise;
 
 import java.util.Arrays;
+import java.utils.stream.Stream;
 
 // BEGIN
 class App {

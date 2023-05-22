@@ -5,14 +5,14 @@ import org.assertj.core.api.Assertions;
 
 // BEGIN
 class AppTest {
-    String[][] image = {
+    String[][] image1 = {
             {"*", "*", "*", "*"},
             {"*", " ", " ", "*"},
             {"*", " ", " ", "*"},
             {"*", "*", "*", "*"},
     };
 
-    String[][] emprtyImage = {
+    String[][] emptyImage = {
             {"", "", "", ""},
             {"", "", "", ""},
             {"", "", "", ""},
@@ -44,7 +44,7 @@ class AppTest {
     }
     @Test
     void testEnlargeArrayImage2() {
-        String[][] actual2 = App.enlargeArrayImage(image2);
+        String[][] actual2 = App.enlargeArrayImage(emptyImage);
         String[][] expected2 = {
                 {"", "", "", "", "", "", "", ""},
                 {"", "", "", "", "", "", "", ""},
@@ -60,7 +60,7 @@ class AppTest {
     }
     @Test
     void testEnlargeArrayImage3() {
-        String[][] actual3 = App.enlargeArrayImage(image3);
+        String[][] actual3 = App.enlargeArrayImage(differentSymbols);
         String[][] expected3 = {
                 {"*", "*", "/", "/", ".", ".", ",", ","},
                 {"*", "*", "/", "/", ".", ".", ",", ","},

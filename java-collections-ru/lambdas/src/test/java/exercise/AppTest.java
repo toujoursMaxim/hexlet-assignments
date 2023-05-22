@@ -39,7 +39,7 @@ class AppTest {
                 {"*", "*", "*", "*", "*", "*", "*", "*"},
                 {"*", "*", "*", "*", "*", "*", "*", "*"},
         };
-        Asserctions.assertThat(actual)
+        Assertions.assertThat(actual)
                 .isEqualTo(expected);
     }
     @Test

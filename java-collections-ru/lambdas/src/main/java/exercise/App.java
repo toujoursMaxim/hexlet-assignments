@@ -1,18 +1,26 @@
 package exercise;
 
 import java.util.Arrays;
-import java.utils.stream.Stream;
+import java.utils.stream;
 
 // BEGIN
-pubcli class App {
-public static String[][] enlargeArrayImage(String[][] image) {
-        String[][] result = Arrays.stream(image)
-                .map(row -> Arrays.stream(row)
-                        .flatMap(symbol -> Stream.of(symbol, symbol))
-                        .toArray(String[]::new))
-                .flatMap(row -> Stream.of(row, row))
+class App {
+    public static String[] duplicateValues(String[] items) {
+
+        return Arrays.stream(items)
+                .flatMap(item -> Arrays.stream(new String[] {item, item}))
+                .toArray(String[]::new);
+    }
+
+    public static String[][] enlargeArrayImage(String[][] image) {
+
+        String[][] horizontalyStretched = Arrays.stream(image)
+                .map(App::duplicateValues)
                 .toArray(String[][]::new);
-        return result;
+
+        return Arrays.stream(horizontalyStretched)
+                .flatMap(item -> Arrays.stream(new String[][] {item, item}))
+                .toArray(String[][]::new);
     }
 }
 // END

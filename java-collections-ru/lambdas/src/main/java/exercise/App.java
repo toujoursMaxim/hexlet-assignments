@@ -1,4 +1,4 @@
-package exercise;
+/*package exercise;
 
 import java.util.Arrays;
 
@@ -21,5 +21,5 @@ public class App {
                 .flatMap(item -> Arrays.stream(new String[][] {item, item}))
                 .toArray(String[][]::new);
     }
-}
+}*/
 // END

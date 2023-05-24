@@ -3,7 +3,7 @@ package exercise;
 import java.util.Arrays;
 
 // BEGIN
-class App {
+public class App {
     public static String[] duplicateValues(String[] items) {
 
         return Arrays.stream(items)

@@ -62,7 +62,7 @@ class AppTest {
 
     @Test
     void testEnlargeArrayImage3() {
-        String[][] actual3 = App.enlargeArrayImage(differentSymbols);
+        String[][] actual3 = App.duplicateValues(differentSymbols);
         String[][] expected3 = {
                 {"*", "*", "/", "/", ".", ".", ",", ","},
                 {"*", "*", "/", "/", ".", ".", ",", ","},

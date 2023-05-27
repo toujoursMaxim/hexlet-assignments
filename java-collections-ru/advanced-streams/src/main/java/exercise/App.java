@@ -13,8 +13,8 @@ class App {
                 .map(s -> s.split(","))
                 .flatMap(strings -> Arrays.stream(strings))
                 .filter(x -> x.contains("X_FORWARDED_"))
-                .map(x -> x.replaceAll("\"",""))
-                .map(x -> x.replaceAll("X_FORWARDED_",""))
+                .map(x -> x.replaceAll("\"", ""))
+                .map(x -> x.replaceAll("X_FORWARDED_", ""))
                 .collect(Collectors.joining(","));
     }
 }

@@ -1,19 +1,17 @@
 package exercise;
 
 import java.util.stream.Collectors;
-import java.util.Arrays;
+import java.util.Stream;
 
 // BEGIN
 class App {
     public static String getForwardedVariables(String environmentVar) {
-        return Arrays.stream(environmentVar.split("\n"))
-                .filter(x -> x.startsWith("environment="))
+        return Stream.of(environmentVar.split("\n"))
+                .filter(x -> x.startsWith("environment"))
                 .map(x -> x.replaceAll("environment=", ""))
-                .map(t -> t.replaceAll(",  \"", ""))
-                .map(s -> s.split(","))
-                .flatMap(strings -> Arrays.stream(strings))
-                .filter(x -> x.contains("X_FORWARDED_"))
                 .map(x -> x.replaceAll("\"", ""))
+                .flatMap(s -> Stream.of(s.split(",")))
+                .filter(x -> x.startsWith("X_FORWARDED_"))
                 .map(x -> x.replaceAll("X_FORWARDED_", ""))
                 .collect(Collectors.joining(","));
     }

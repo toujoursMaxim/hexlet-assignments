@@ -1,7 +1,7 @@
 package exercise;
 
 import java.util.stream.Collectors;
-import java.util.Stream;
+import java.util.stream.Stream;
 
 // BEGIN
 class App {

@@ -19,7 +19,7 @@ class App {
                 difference.put(key, "deleted");
             } else if (data1.get(key).equals(data2.get(key))) {
                 difference.put(key, "unchanged");
-                } else {
+            } else {
                 difference.put(key, "changed");
             }
         }

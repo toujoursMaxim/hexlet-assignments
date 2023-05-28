@@ -8,8 +8,8 @@ import java.util.TreeSet;
 // BEGIN
 class App {
     public static Map<String, String> genDiff(Map<String, Object> data1, Map<String, Object> data2) {
-        Map<String, Object> difference = new LinkedHashMap<>();
-        Set<String, Object> keys = new TreeSet<>(data1.keySet());
+        Map<String, String> difference = new LinkedHashMap<>();
+        Set<String> keys = new TreeSet<>(data1.keySet());
         keys.addAll(data2.keySet());
 
         for (String key : keys) {
